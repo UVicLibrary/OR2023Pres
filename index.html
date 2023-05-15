@@ -8,8 +8,11 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
-		
+		<link rel="stylesheet" href="dist/theme/solarized.css">
+
+		<link rel="stylesheet" href="dist/custom.css">
+		<link rel="stylesheet" href="dist/timeline.css">
+
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -20,20 +23,186 @@
 				<section>
 					<h1>Linked Data in the Repository</h1>
 					<h3>Standards-Based Development for Discovery and Interoperability</h3>
+					&nbsp;
+					<h4>Tiffany Chan &ensp;|&ensp; University of Victoria</h4>
 				</section>
 				<section>
-					<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-						<h2>Iframe Backgrounds</h2>
-						<p>Since reveal.js runs on the web, you can easily embed other web content. Try interacting with the page in the background.</p>
+						<h2>University of Victoria Libraries</h2>
+						<ul>
+							<li class="fragment">About 20,000 students, 900 full-time faculty</li>
+							<li class="fragment">2 developers, X metadata staff working in/with our digital repository</li>
+						</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Vault Digital Repository</h2>
+						<ul>
+							<li class="fragment">Open source, customized instance of Hyku (Samvera)</li>
+							<li class="fragment">One of several digital platforms we use</li>
+							<li class="fragment">Holds digitized materials from Special Collections & Archives, faculty/community partnerships</li>
+							<li class="fragment">91 collections, 11539 works</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h1>Examples</h1>
+				</section>
+				<section data-background="images/orpen.jpg">
+					<div style="position: absolute; width: 45%; top: -330px; right: -150px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); padding: 20px; font-size: 20px; text-align: left;">
+						<h2><a href="https://vault.library.uvic.ca/collections/61da6cbd-02e8-4dd3-8e9d-ccbd2947ef4f" target="_blank">Sir William Orpen Illustrated Letters</a></h2>
 					</div>
+				</section>
+				<section data-background-video="video/mathew_ko_edited.mp4" >
+					<div style="position: absolute; width: 45%; left: -50px; top: 300px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); padding: 20px; font-size: 20px; text-align: left;">
+						<h2><a href="https://vault.library.uvic.ca/collections/ed61bace-5c1c-4e77-975e-0f6f943ae92d" target="_blank">Mathew Ko Colour Films:</a><br/> Victoria's Chinatown and Region</h2>
+					</div>
+				</section>
+				<section>
+					<h2>Migration:<br/> ContentDM to Vault</h2>
+					<ul>
+						<li class="fragment">Decision made in 2016, migration from 2018 to 2023</li>
+						<li class="fragment">Support for open standards (Linked Data, IIIF)</li>
+						<li class="fragment">More flexibility and control over how we organize and present our objects and collections</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Migration Workflow</h2>
+					<div class="timeline-div">
+						<ul class="timeline">
+							<li style="--accent-color:#41516C">
+								<div class="date">Digitization</div>
+								<div class="title"></div>
+								<div class="descr">(Re)digitize items if necessary and place files on shared local storage.</div>
+							</li>
+							<li style="--accent-color:#41516C">
+								<div class="date">Metadata</div>
+								<div class="title"></div>
+								<div class="descr">Normalize, edit, and convert metadata values to URIs if possible. Upload csv files to Vault. For more details on this process, see <a href="https://www.tandfonline.com/doi/full/10.1080/01639374.2023.2204309" target="_blank">our article</a>.</div>
+							</li>
+							<li style="--accent-color:#41516C">
+								<div class="date">Items in Vault</div>
+								<div class="title"></div>
+								<div class="descr">Developers ensure things upload smoothly and customize the interface as necessary.</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>Linked Data (URI) Fields</h2>
+					<table>
+						<thead>
+						<tr>
+							<th>Field Name(s)</th>
+							<th>Controlled Vocabulary</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>Provider, Creator, Contributor, Subject, Geographic Coverage, Physical Repository</td>
+							<td>OCLC FAST</td>
+						</tr>
+						<tr>
+							<td>Genre</td>
+							<td>Getty Art and Architecture Thesaurus</td>
+						</tr>
+						<tr>
+							<td>Rights Statement</td>
+							<td>https://rightsstatements.org; <br/> https://creativecommons.org</td>
+						</tr>
+						</tbody>
+					</table>
+					<p style="font-size: 24px">* See Figure 3 in <a href="https://www.tandfonline.com/doi/full/10.1080/01639374.2023.2204309" target="_blank">the article</a> for a more detailed table</p>
+				</section>
+				<section>
+					<h2>URIs and Labels</h2>
+					<pre>
+<code class="json">
+"creator_tesim":["http://id.worldcat.org/fast/78887"],
+"creator_label_tesim":["Orpen, William, Sir, 1878-1931"],
+"contributor_tesim":["http://id.worldcat.org/fast/2012667"],
+"contributor_label_tesim":["Glenavy, Beatrice Moss Campbell,
+	Baroness, 1883-1970"],
+"subject_tesim":["http://id.worldcat.org/fast/1050538",
+  "http://id.worldcat.org/fast/78887",
+  "http://id.worldcat.org/fast/2012667",
+  "http://id.worldcat.org/fast/1050534"],
+"subject_label_tesim":["Painters--Correspondence",
+  "Orpen, William, Sir, 1878-1931",
+  "Glenavy, Beatrice Moss Campbell, Baroness, 1883-1970",
+  "Painters--Biography"</code>
+					</pre>
+				</section>
+				<section>
+					<h2>In the Interface</h2>
+					<img src="images/orpen_metadata.jpg"/>
+				</section>
+				<section>
+					<h2>How to Get URIs: via the IIIF Manifest/JSON</h2>
+					<p>Go the page for any work and add /manifest.json or .ttl to the end of the URL</p>
+					<div class="fragment">
+						<p><a href="https://vault.library.uvic.ca/concern/generic_works/1a597e67-17a8-4c97-9c63-c835a41f5474?locale=en" target="_blank">Example:</a></p>
+						<span class="long-url">vault.library.uvic.ca/concern/generic_works/1a597e67-17a8-4c97-9c63-c835a41f5474</span>
+						<span class="fragment fade-out long-url" style="color:#e06666">?locale=en</span><span class="fragment long-url fade-in-then-out" style="color:#e06666">/manifest.json</span><span class="fragment long-url" style="color:#e06666">.ttl</span>
+					</div>
+				</section>
+				<section>
+					<h2>Extended Date/Time Format</h2>
+					<ul>
+						<li><a href="https://www.loc.gov/standards/datetime/">EDTF</a>: a way to include nuance when expressing dates in a way that basic ISO formats cannot
+						<li>1912~ means "approximately 1912"</li>
+						<li>. ./1000 means "Before 1000 (AD)"</li>
+					</ul>
+				</section>
+				<section>
+					<a href="https://vault.library.uvic.ca/concern/generic_works/41991908-2b23-41bd-a682-eaacb211ede3" target="_blank">
+						<h2>EDTF Facet Links</h2>
+					</a>
+					<div class="r-stack">
+						<div class="fragment fade-in-then-out">
+							<img src="images/date_created_form.jpg"/>
+						</div>
+						<div class="fragment fade-in-then-out">
+							<a href="https://vault.library.uvic.ca/concern/generic_works/41991908-2b23-41bd-a682-eaacb211ede3" target="_blank"><img src="images/medieval_fragment.jpg"/></a>
+						</div>
+						<div class="fragment fade-in-then-out">
+							<a href="https://vault.library.uvic.ca/concern/generic_works/41991908-2b23-41bd-a682-eaacb211ede3" target="_blank"><img src="images/date_created.jpg"/></a>
+						</div>
+						<div class="fragment fade-in-then-out">
+							<a href="https://vault.library.uvic.ca/catalog?range[year_range_isim][begin]=1476&range[year_range_isim][end]=1500" target="_blank"><img src="images/date_created_search.jpg"/></a>
+						</div>
+						<div class="fragment">
+							<a href="https://vault.library.uvic.ca/"><img src="images/date_created_browse.jpg"/></a>
+						</div>
+					</div>
+				</section>
+				<section data-background-image="images/homepage_wide.jpg"></section>
+				<section><h2>Interactive Video Transcripts</h2></section>
+				<section>
+					<h2>Running the Code</h2>
+					<li>Code: <a href="https://github.com/UVicLibrary/Vault" target="_blank">github.com/UVicLibrary/Vault</a><br/></li>
+					<li><a href="https://github.com/UVicLibrary/Vault/blob/docker_multitenant/documentation/Developing_with_Docker.md">Docker instructions</a></li>
+				</section>
+				<section><h2>Takeaways</h2></section>
+				<section>
+					<h2>Migration Lessons</h2>
+				</section>
+				<section>
+					<h2>Free ($) vs. Freedom</h2>
+					<ul>
+						<li>Where/How do you want to spend the money?</li>
+						<li><a href="https://hyku.samvera.org/2015/12/16/community_input.html">Balance between customization/sustainability</a></li>
+					</ul>
 				</section>
 			</div>
 		</div>
+		<div>
 
+		</div>
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -42,7 +211,7 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealZoom, RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 		</script>
 	</body>

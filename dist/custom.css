@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+.reveal {
+    font-family: "Poppins", "Source Sans Pro", sans-serif;
+}
+
+.reveal h3, .reveal h4 {
+    text-transform: none;
+}
+
+.reveal h1 {
+    /*color: #36FBA1;*/
+}
+
+.no-margin {
+    margin-left: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.reveal li {
+    font-size: 32px;
+    text-align: center;
+}
+
+.reveal ul {
+    list-style-position: inside;
+}
+
+.reveal .darken-bg .slide-background-content:before {
+     content: '';
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background: rgba(0,0,0,.6);
+     opacity: .6;
+}
+
+.reveal tbody {
+    font-size: 24px;
+}
+
+.reveal thead {
+    font-size: 32px;
+}
+
+.long-url {
+    font-size: 2rem;
+
+    /* From Handling Long Words and URLs by Chris Coyier */
+
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    /*word-break: break-word;*/
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.reveal .fragment.fade-out.visible,
+.reveal .fragment.fade-in-then-out.visible:not(.current-fragment) {
+    display: none;
+}
