@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Linked Data in the Repository - OR2023 Presentation</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -52,14 +52,15 @@
 						<h2><a href="https://vault.library.uvic.ca/collections/61da6cbd-02e8-4dd3-8e9d-ccbd2947ef4f" target="_blank">Sir William Orpen Illustrated Letters</a></h2>
 					</div>
 				</section>
-				<section data-background-video="video/mathew_ko_edited.mp4" >
+				<section data-background-video="video/mathew_ko_shortened.mp4" >
 					<div style="position: absolute; width: 45%; left: -50px; top: 300px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); padding: 20px; font-size: 20px; text-align: left;">
 						<h2><a href="https://vault.library.uvic.ca/collections/ed61bace-5c1c-4e77-975e-0f6f943ae92d" target="_blank">Mathew Ko Colour Films:</a><br/> Victoria's Chinatown and Region</h2>
 					</div>
 				</section>
 				<section>
-					<h2>Migration:<br/> ContentDM to Vault</h2>
+					<h2>Migrating to Vault</h2>
 					<ul>
+						<li class="fragment">Previously had a very old ContentDM</li>
 						<li class="fragment">Decision made in 2016, migration from 2018 to 2023</li>
 						<li class="fragment">Support for open standards (Linked Data, IIIF)</li>
 						<li class="fragment">More flexibility and control over how we organize and present our objects and collections</li>
@@ -145,39 +146,52 @@
 						<span class="fragment fade-out long-url" style="color:#e06666">?locale=en</span><span class="fragment long-url fade-in-then-out" style="color:#e06666">/manifest.json</span><span class="fragment long-url" style="color:#e06666">.ttl</span>
 					</div>
 				</section>
+				<section><h2>Customized Features</h2></section>
 				<section>
 					<h2>Extended Date/Time Format</h2>
 					<ul>
-						<li><a href="https://www.loc.gov/standards/datetime/">EDTF</a>: a way to include nuance when expressing dates in a way that basic ISO formats cannot
-						<li>1912~ means "approximately 1912"</li>
-						<li>. ./1000 means "Before 1000 (AD)"</li>
+						<li><a href="https://www.loc.gov/standards/datetime/">EDTF</a>: a way to express nuanced dates (using symbols) in a way that basic ISO formats cannot
+						<li class="fragment">1912~ means "approximately 1912"</li>
+						<li class="fragment">. ./1000 means "Before 1000 (AD)"</li>
 					</ul>
 				</section>
 				<section>
-					<a href="https://vault.library.uvic.ca/concern/generic_works/41991908-2b23-41bd-a682-eaacb211ede3" target="_blank">
-						<h2>EDTF Facet Links</h2>
-					</a>
+					<h2>EDTF Date Indexing</h2>
 					<div class="r-stack">
-						<div class="fragment fade-in-then-out">
-							<img src="images/date_created_form.jpg"/>
-						</div>
-						<div class="fragment fade-in-then-out">
-							<a href="https://vault.library.uvic.ca/concern/generic_works/41991908-2b23-41bd-a682-eaacb211ede3" target="_blank"><img src="images/medieval_fragment.jpg"/></a>
-						</div>
-						<div class="fragment fade-in-then-out">
-							<a href="https://vault.library.uvic.ca/concern/generic_works/41991908-2b23-41bd-a682-eaacb211ede3" target="_blank"><img src="images/date_created.jpg"/></a>
-						</div>
-						<div class="fragment fade-in-then-out">
-							<a href="https://vault.library.uvic.ca/catalog?range[year_range_isim][begin]=1476&range[year_range_isim][end]=1500" target="_blank"><img src="images/date_created_search.jpg"/></a>
+						<div class="fragment visible">
+							<p  style="margin-bottom: 3rem;">Dates are entered using EDTF notation...</p>
+							<a href="https://vault.library.uvic.ca/concern/generic_works/41991908-2b23-41bd-a682-eaacb211ede3" target="_blank"><img src="images/date_created_form.jpg"/></a>
 						</div>
 						<div class="fragment">
-							<a href="https://vault.library.uvic.ca/"><img src="images/date_created_browse.jpg"/></a>
+							<p style="margin-bottom: 3rem;">And indexed in multiple formats</p>
+							<pre>
+									<code class="json">
+	"date_created_tesim":["1476/1500~"],
+	"year_sort_dtsi":"1476-01-01T00:00:00Z",
+	"year_range_isim":[1476, 1477, 1478, 1479 ... 1500]
+									</code>
+								</pre>
 						</div>
 					</div>
 				</section>
-<!--				<section data-background-image="images/homepage_wide.jpg"></section>-->
-				<section data-background-iframe="https://vault.library.uvic.ca" data-background-interactive></section>
-				<section><h2>Interactive Video Transcripts</h2></section>
+				<section data-background-iframe="https://vault.library.uvic.ca/concern/generic_works/d6d01db3-8c3f-451c-bba9-817cd38f9870?locale=en" data-background-interactive>
+					<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2><a href="https://vault.library.uvic.ca/concern/generic_works/41991908-2b23-41bd-a682-eaacb211ede3?locale=en" target="_blank">EDTF in the Interface</a></h2>
+						<p>Dates are <a href="https://github.com/corylown/edtf-humanize" target="_blank">humanized</a> for display. They link to faceted searches for items in the same date range.</p>
+					</div>
+				</section>
+				<section data-background-iframe="https://vault.library.uvic.ca" data-background-interactive>
+					<div style="position: absolute; width: 40%; top: 275px; right: -50px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2><a href="https://vault.library.uvic.ca/concern/generic_works/d6d01db3-8c3f-451c-bba9-817cd38f9870?locale=en" target="_blank">Homepage Facets</a></h2>
+						<p>Allows users to filter using broad categories (<a href="https://vault.library.uvic.ca/" target="_blank">vault.library.uvic.ca</a>) and complements the <a href="https://vault.library.uvic.ca/advanced" target="_blank">advanced search</a>.</p>
+					</div>
+				</section>
+				<section data-background-iframe="https://vault.library.uvic.ca/concern/generic_works/496f803b-24bb-415d-a7fc-8e9af1b38741?locale=en" data-background-interactive>
+					<div style="position: absolute; width: 40%; left: 0; top: 275px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2><a href="https://vault.library.uvic.ca/concern/generic_works/496f803b-24bb-415d-a7fc-8e9af1b38741?locale=en" target="_blank">Interactive Video Transcripts</a></h2>
+						<p><a href="https://ableplayer.github.io/ableplayer/" target="_blank">Able Player</a> uses .vtt files (<a href="https://www.w3.org/TR/webvtt1/" target="_blank">Web VTT format</a>) to create interactive transcripts for videos when available.</p>
+					</div>
+				</section>
 				<section>
 					<h2>Running the Code</h2>
 					<li>Code: <a href="https://github.com/UVicLibrary/Vault" target="_blank">github.com/UVicLibrary/Vault</a><br/></li>

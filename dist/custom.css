@@ -4,11 +4,13 @@
     font-family: "Poppins", "Source Sans Pro", sans-serif;
 }
 
-.reveal h3, .reveal h4 {
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
     text-transform: none;
+    letter-spacing: 0.05rem;
 }
 
 .reveal h1 {
+    letter-spacing: 0.05rem;
     /*color: #36FBA1;*/
 }
 
@@ -70,4 +72,12 @@
 .reveal .fragment.fade-out.visible,
 .reveal .fragment.fade-in-then-out.visible:not(.current-fragment) {
     display: none;
+}
+
+.reveal .code-wrapper {
+    width: fit-content;
+}
+
+.reveal .code-wrapper code {
+    padding: 2rem;
 }
