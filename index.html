@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Linked Data in the Repository - OR2023 Presentation</title>
+		<title>Open Standards-Based Development for Discovery and Interoperability - OR2023 Presentation</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -21,36 +21,41 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h1>Linked Data in the Repository</h1>
-					<h3>Standards-Based Development for Discovery and Interoperability</h3>
+					<h2>Open Standards-Based Development for Discovery and Interoperability</h2>
 					&nbsp;
 					<h4>Tiffany Chan &ensp;|&ensp; University of Victoria</h4>
 				</section>
-				<section>
+				<section data-background="images/UVicEdge-Zoom-background-library.jpg">
+					<div class="text-background">
 						<h2>University of Victoria Libraries</h2>
 						<ul>
-							<li class="fragment">About 20,000 students, 900 full-time faculty</li>
-							<li class="fragment">2 developers, X metadata staff working in/with our digital repository</li>
+							<li class="fragment">About 20,000 students, 900 full-time faculty, 150 library staff</li>
+							<li class="fragment">Multiple platforms for all our collections/objects (e.g. DSpace, Internet Archive, Dataverse)</li>
+							<li class="fragment">2 developers, X metadata staff working directly in/with our repository software (Vault)</li>
 						</ul>
+					</div>
 				</section>
 				<section>
-					<section>
-						<h2>Vault Digital Repository</h2>
-						<ul>
-							<li class="fragment">Open source, customized instance of Hyku (Samvera)</li>
-							<li class="fragment">One of several digital platforms we use</li>
-							<li class="fragment">Holds digitized materials from Special Collections & Archives, faculty/community partnerships</li>
-							<li class="fragment">91 collections, 11539 works</li>
-						</ul>
+					<section data-background="images/all_collections.jpg">
+						<div class="text-background">
+							<h2>Vault</h2>
+							<ul>
+								<li class="fragment">Open source, customized instance of <a href="https://hyku.samvera.org/" target="_blank">Hyku</a> (Samvera)</li>
+								<li class="fragment">Holds digitized materials from Special Collections & Archives, faculty/community partnerships</li>
+								<li class="fragment">91 collections, 11539 works</li>
+							</ul>
+						</div>
 					</section>
 				</section>
 				<section>
-					<h1>Examples</h1>
+					<h2>Examples from Our Collections</h2>
 				</section>
 				<section data-background="images/orpen.jpg">
 					<div style="position: absolute; width: 45%; top: -330px; right: -150px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); padding: 20px; font-size: 20px; text-align: left;">
 						<h2><a href="https://vault.library.uvic.ca/collections/61da6cbd-02e8-4dd3-8e9d-ccbd2947ef4f" target="_blank">Sir William Orpen Illustrated Letters</a></h2>
 					</div>
+				</section>
+				<section data-background="images/transvestia.jpg">
 				</section>
 				<section data-background-video="video/mathew_ko_shortened.mp4" >
 					<div style="position: absolute; width: 45%; left: -50px; top: 300px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); padding: 20px; font-size: 20px; text-align: left;">
@@ -58,35 +63,13 @@
 					</div>
 				</section>
 				<section>
-					<h2>Migrating to Vault</h2>
+					<h2>Migration: ContentDM to Vault</h2>
 					<ul>
-						<li class="fragment">Previously had a very old ContentDM</li>
+						<li><a href="https://www.youtube.com/watch?v=6YbBxUzhsyo" target="_blank">More detail and context in this presentation</a></li>
 						<li class="fragment">Decision made in 2016, migration from 2018 to 2023</li>
 						<li class="fragment">Support for open standards (Linked Data, IIIF)</li>
 						<li class="fragment">More flexibility and control over how we organize and present our objects and collections</li>
 					</ul>
-				</section>
-				<section>
-					<h2>Migration Workflow</h2>
-					<div class="timeline-div">
-						<ul class="timeline">
-							<li style="--accent-color:#41516C">
-								<div class="date">Digitization</div>
-								<div class="title"></div>
-								<div class="descr">(Re)digitize items if necessary and place files on shared local storage.</div>
-							</li>
-							<li style="--accent-color:#41516C">
-								<div class="date">Metadata</div>
-								<div class="title"></div>
-								<div class="descr">Normalize, edit, and convert metadata values to URIs if possible. Upload csv files to Vault. For more details on this process, see <a href="https://www.tandfonline.com/doi/full/10.1080/01639374.2023.2204309" target="_blank">our article</a>.</div>
-							</li>
-							<li style="--accent-color:#41516C">
-								<div class="date">Items in Vault</div>
-								<div class="title"></div>
-								<div class="descr">Developers ensure things upload smoothly and customize the interface as necessary.</div>
-							</li>
-						</ul>
-					</div>
 				</section>
 				<section>
 					<h2>Linked Data (URI) Fields</h2>
@@ -118,32 +101,32 @@
 					<h2>URIs and Labels</h2>
 					<pre>
 <code class="json">
-"creator_tesim":["http://id.worldcat.org/fast/78887"],
-"creator_label_tesim":["Orpen, William, Sir, 1878-1931"],
-"contributor_tesim":["http://id.worldcat.org/fast/2012667"],
-"contributor_label_tesim":["Glenavy, Beatrice Moss Campbell,
+"creator":["http://id.worldcat.org/fast/78887"],
+"creator_label":["Orpen, William, Sir, 1878-1931"],
+"contributor":["http://id.worldcat.org/fast/2012667"],
+"contributor_label":["Glenavy, Beatrice Moss Campbell,
 	Baroness, 1883-1970"],
-"subject_tesim":["http://id.worldcat.org/fast/1050538",
+"subject":["http://id.worldcat.org/fast/1050538",
   "http://id.worldcat.org/fast/78887",
   "http://id.worldcat.org/fast/2012667",
   "http://id.worldcat.org/fast/1050534"],
-"subject_label_tesim":["Painters--Correspondence",
+"subject_label":["Painters--Correspondence",
   "Orpen, William, Sir, 1878-1931",
   "Glenavy, Beatrice Moss Campbell, Baroness, 1883-1970",
   "Painters--Biography"</code>
 					</pre>
 				</section>
 				<section>
-					<h2>In the Interface</h2>
+					<h2>Labels in the Interface</h2>
 					<img src="images/orpen_metadata.jpg"/>
 				</section>
 				<section>
-					<h2>How to Get URIs: via the IIIF Manifest/JSON</h2>
+					<h2>How to Access Linked Data <br/>via the IIIF Manifest or RDF/TTL</h2>
 					<p>Go the page for any work and add /manifest.json or .ttl to the end of the URL</p>
 					<div class="fragment">
 						<p><a href="https://vault.library.uvic.ca/concern/generic_works/1a597e67-17a8-4c97-9c63-c835a41f5474?locale=en" target="_blank">Example:</a></p>
 						<span class="long-url">vault.library.uvic.ca/concern/generic_works/1a597e67-17a8-4c97-9c63-c835a41f5474</span>
-						<span class="fragment fade-out long-url" style="color:#e06666">?locale=en</span><span class="fragment long-url fade-in-then-out" style="color:#e06666">/manifest.json</span><span class="fragment long-url" style="color:#e06666">.ttl</span>
+						<span class="fragment fade-out long-url" style="color:#e06666">?locale=en</span><span class="fragment long-url fade-in-then-out" style="color:#02951b">/manifest.json</span><span class="fragment long-url" style="color:#4f46e5">.ttl</span>
 					</div>
 				</section>
 				<section><h2>Customized Features</h2></section>
@@ -174,15 +157,15 @@
 						</div>
 					</div>
 				</section>
-				<section data-background-iframe="https://vault.library.uvic.ca/concern/generic_works/d6d01db3-8c3f-451c-bba9-817cd38f9870?locale=en" data-background-interactive>
+				<section data-background-iframe="https://vault.library.uvic.ca/concern/generic_works/41991908-2b23-41bd-a682-eaacb211ede3?locale=en" data-background-interactive>
 					<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
 						<h2><a href="https://vault.library.uvic.ca/concern/generic_works/41991908-2b23-41bd-a682-eaacb211ede3?locale=en" target="_blank">EDTF in the Interface</a></h2>
-						<p>Dates are <a href="https://github.com/corylown/edtf-humanize" target="_blank">humanized</a> for display. They link to faceted searches for items in the same date range.</p>
+						<p>Dates are <a href="https://github.com/corylown/edtf-humanize" target="_blank">humanized</a> for display. The links in the Date Created field link to faceted searches for items in the same date range.</p>
 					</div>
 				</section>
 				<section data-background-iframe="https://vault.library.uvic.ca" data-background-interactive>
 					<div style="position: absolute; width: 40%; top: 275px; right: -50px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-						<h2><a href="https://vault.library.uvic.ca/concern/generic_works/d6d01db3-8c3f-451c-bba9-817cd38f9870?locale=en" target="_blank">Homepage Facets</a></h2>
+						<h2><a href="https://vault.library.uvic.ca?locale=en" target="_blank">Homepage Facets</a></h2>
 						<p>Allows users to filter using broad categories (<a href="https://vault.library.uvic.ca/" target="_blank">vault.library.uvic.ca</a>) and complements the <a href="https://vault.library.uvic.ca/advanced" target="_blank">advanced search</a>.</p>
 					</div>
 				</section>
@@ -192,10 +175,13 @@
 						<p><a href="https://ableplayer.github.io/ableplayer/" target="_blank">Able Player</a> uses .vtt files (<a href="https://www.w3.org/TR/webvtt1/" target="_blank">Web VTT format</a>) to create interactive transcripts for videos when available.</p>
 					</div>
 				</section>
-				<section>
-					<h2>Running the Code</h2>
-					<li>Code: <a href="https://github.com/UVicLibrary/Vault" target="_blank">github.com/UVicLibrary/Vault</a><br/></li>
-					<li><a href="https://github.com/UVicLibrary/Vault/blob/docker_multitenant/documentation/Developing_with_Docker.md">Docker instructions</a></li>
+				<section data-background="images/code.jpg">
+					<div class="text-background">
+						<h2>Running the Code</h2>
+						<li>Code: <a href="https://github.com/UVicLibrary/Vault" target="_blank">github.com/UVicLibrary/Vault</a><br/></li>
+						<li>Switch to the <code class="inline-code">docker_multitenant</code> branch</li>
+						<li><a href="https://github.com/UVicLibrary/Vault/blob/docker_multitenant/documentation/Developing_with_Docker.md">Instructions</a> to run Vault locally with Docker</li>
+					</div>
 				</section>
 				<section><h2>Takeaways</h2></section>
 				<section>
