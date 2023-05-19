@@ -65,10 +65,10 @@
 				<section>
 					<h2>Migration: ContentDM to Vault</h2>
 					<ul>
-						<li><a href="https://www.youtube.com/watch?v=6YbBxUzhsyo" target="_blank">More detail and context in this presentation</a></li>
 						<li class="fragment">Decision made in 2016, migration from 2018 to 2023</li>
 						<li class="fragment">Support for open standards (Linked Data, IIIF)</li>
 						<li class="fragment">More flexibility and control over how we organize and present our objects and collections</li>
+						<li class="fragment"><a href="https://www.youtube.com/watch?v=6YbBxUzhsyo" target="_blank">More detail and context in this presentation</a></li>
 					</ul>
 				</section>
 				<section>
@@ -134,7 +134,7 @@
 					<h2>Extended Date/Time Format</h2>
 					<ul>
 						<li><a href="https://www.loc.gov/standards/datetime/">EDTF</a>: a way to express nuanced dates (using symbols) in a way that basic ISO formats cannot
-						<li class="fragment">1912~ means "approximately 1912"</li>
+						<li class="fragment">Examples: 1912~ means "approximately 1912"</li>
 						<li class="fragment">. ./1000 means "Before 1000 (AD)"</li>
 					</ul>
 				</section>
@@ -149,30 +149,30 @@
 							<p style="margin-bottom: 3rem;">And indexed in multiple formats</p>
 							<pre>
 									<code class="json">
-	"date_created_tesim":["1476/1500~"],
-	"year_sort_dtsi":"1476-01-01T00:00:00Z",
-	"year_range_isim":[1476, 1477, 1478, 1479 ... 1500]
+	"date_created":["1476/1500~"],
+	"year_sort":"1476-01-01T00:00:00Z",
+	"year_range":[1476, 1477, 1478, 1479 ... 1500]
 									</code>
 								</pre>
 						</div>
 					</div>
 				</section>
 				<section data-background-iframe="https://vault.library.uvic.ca/concern/generic_works/41991908-2b23-41bd-a682-eaacb211ede3?locale=en" data-background-interactive>
-					<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-						<h2><a href="https://vault.library.uvic.ca/concern/generic_works/41991908-2b23-41bd-a682-eaacb211ede3?locale=en" target="_blank">EDTF in the Interface</a></h2>
-						<p>Dates are <a href="https://github.com/corylown/edtf-humanize" target="_blank">humanized</a> for display. The links in the Date Created field link to faceted searches for items in the same date range.</p>
+					<div class="iframe-descr" style="right: 0;">
+						<h2>EDTF in the Interface</h2>
+						<p>Dates are humanized for display. The links in the Date Created field link to faceted searches for items in the same date range.</p>
 					</div>
 				</section>
 				<section data-background-iframe="https://vault.library.uvic.ca" data-background-interactive>
-					<div style="position: absolute; width: 40%; top: 275px; right: -50px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-						<h2><a href="https://vault.library.uvic.ca?locale=en" target="_blank">Homepage Facets</a></h2>
-						<p>Allows users to filter using broad categories (<a href="https://vault.library.uvic.ca/" target="_blank">vault.library.uvic.ca</a>) and complements the <a href="https://vault.library.uvic.ca/advanced" target="_blank">advanced search</a>.</p>
+					<div class="iframe-descr" style="top: 275px; right: -50px;">
+						<h2>Homepage Facets</h2>
+						<p>Allows users to filter using broad categories (vault.library.uvic.ca) and complements the advanced search.</p>
 					</div>
 				</section>
 				<section data-background-iframe="https://vault.library.uvic.ca/concern/generic_works/496f803b-24bb-415d-a7fc-8e9af1b38741?locale=en" data-background-interactive>
-					<div style="position: absolute; width: 40%; left: 0; top: 275px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-						<h2><a href="https://vault.library.uvic.ca/concern/generic_works/496f803b-24bb-415d-a7fc-8e9af1b38741?locale=en" target="_blank">Interactive Video Transcripts</a></h2>
-						<p><a href="https://ableplayer.github.io/ableplayer/" target="_blank">Able Player</a> uses .vtt files (<a href="https://www.w3.org/TR/webvtt1/" target="_blank">Web VTT format</a>) to create interactive transcripts for videos when available.</p>
+					<div class="iframe-descr" style="left: 0; top: 275px;">
+						<h2>Interactive Video Transcripts</h2>
+						<p>Able Player uses .vtt files (Web VTT format) to create interactive transcripts for videos when available.</p>
 					</div>
 				</section>
 				<section data-background="images/code.jpg">
@@ -183,16 +183,16 @@
 						<li><a href="https://github.com/UVicLibrary/Vault/blob/docker_multitenant/documentation/Developing_with_Docker.md">Instructions</a> to run Vault locally with Docker</li>
 					</div>
 				</section>
-				<section><h2>Takeaways</h2></section>
 				<section>
-					<h2>Migration Lessons</h2>
+					<h2>Could this model work for your institution?</h2>
+					<ul>
+						<li><a href="http://www.inthelibrarywiththeleadpipe.org/2019/digital-libraries-critical-practice-in-communities/" target="_blank">Not free ($)</a>, but comes with more freedom</li>
+						<li><a href="https://hyku.samvera.org/2015/12/16/community_input.html">Hannah Frost: Tension between customization & sustainability</a></li>
+						<li>More communication necessary between programmers and "non-technical" folks</li>
+					</ul>
 				</section>
 				<section>
-					<h2>Free ($) vs. Freedom</h2>
-					<ul>
-						<li>Where/How do you want to spend the money?</li>
-						<li><a href="https://hyku.samvera.org/2015/12/16/community_input.html">Balance between customization/sustainability</a></li>
-					</ul>
+					<h2>Should your institution consider migrating?</h2>
 				</section>
 			</div>
 		</div>
