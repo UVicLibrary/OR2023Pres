@@ -23,53 +23,76 @@
 				<section>
 					<h2>Open Standards-Based Development for Discovery and Interoperability</h2>
 					&nbsp;
-					<h4>Tiffany Chan &ensp;|&ensp; University of Victoria</h4>
+					<p>Tiffany Chan&ensp;|&ensp;University of Victoria, Canada</p>
+					<p>Link to slides: </p>
+				</section>
 				</section>
 				<section data-background="images/UVicEdge-Zoom-background-library.jpg">
 					<div class="text-background">
 						<h2>University of Victoria Libraries</h2>
 						<ul>
-							<li class="fragment">About 20,000 students, 900 full-time faculty, 150 library staff</li>
-							<li class="fragment">Multiple platforms for all our collections/objects (e.g. DSpace, Internet Archive, Dataverse)</li>
+							<li>About 20,000 students, 900 full-time faculty, 150 library staff</li>
+							<li class="fragment">Multiple platforms for all our collections/objects</li>
 							<li class="fragment">2 developers, X metadata staff working directly in/with our repository software (Vault)</li>
 						</ul>
 					</div>
+					<aside class="notes">
+						<ul>
+							<li>We are a mid-size university by Canadian standards</li>
+							<li>We use several platforms to deposit and disseminate our stuff, including DSpace, Internet Archive, Dataverse and others</li>
+							<li>One of those platforms, which I'm going to describe in detail is called Vault</li>
+						</ul>
+					</aside>
+				</section>
+				<section data-background="images/all_collections.jpg">
+					<div class="text-background">
+						<h2>Vault</h2>
+						<ul>
+							<li>Holds digitized materials from Special Collections & Archives, faculty/community partnerships</li>
+							<li class="fragment">Customized instance of <a href="https://hyku.samvera.org/" target="_blank">Hyku</a> (<a href="https://samvera.org/what-is-samvera/samvera-open-source-repository-framework" target="_blank">Samvera</a>)</li>
+							<li class="fragment">94 collections, 12000+ works, 98000+ files</li>
+						</ul>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li>We call it Vault because it mostly holds digitized objects from our Special Collections and Archives (the more rare and valuable stuff)</li>
+							<li>Also houses materials from faculty and community partnerships, such as audio recordings or oral histories</li>
+							<li>Vault is built on an open-source software called Hyku, which is maintained by Samvera</li>
+							<li>At present, we have 94 collections with over 12000 works in them, over 98000 files</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
-					<section data-background="images/all_collections.jpg">
-						<div class="text-background">
-							<h2>Vault</h2>
-							<ul>
-								<li class="fragment">Open source, customized instance of <a href="https://hyku.samvera.org/" target="_blank">Hyku</a> (Samvera)</li>
-								<li class="fragment">Holds digitized materials from Special Collections & Archives, faculty/community partnerships</li>
-								<li class="fragment">91 collections, 11539 works</li>
-							</ul>
-						</div>
-					</section>
-				</section>
-				<section>
-					<h2>Examples from Our Collections</h2>
+					<h2>Example Collections</h2>
 				</section>
 				<section data-background="images/orpen.jpg">
 					<div style="position: absolute; width: 45%; top: -330px; right: -150px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); padding: 20px; font-size: 20px; text-align: left;">
 						<h2><a href="https://vault.library.uvic.ca/collections/61da6cbd-02e8-4dd3-8e9d-ccbd2947ef4f" target="_blank">Sir William Orpen Illustrated Letters</a></h2>
 					</div>
-				</section>
-				<section data-background="images/transvestia.jpg">
+					<aside class="notes">
+						<li>We have several collections of correspondence (letters) in Vault, many from the early 1900s that have been scanned and uploaded as high-resolution images</li>
+						<li>IIIF viewer pictured here</li>
+					</aside>
 				</section>
 				<section data-background-video="video/mathew_ko_shortened.mp4" >
 					<div style="position: absolute; width: 45%; left: -50px; top: 300px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); padding: 20px; font-size: 20px; text-align: left;">
 						<h2><a href="https://vault.library.uvic.ca/collections/ed61bace-5c1c-4e77-975e-0f6f943ae92d" target="_blank">Mathew Ko Colour Films:</a><br/> Victoria's Chinatown and Region</h2>
 					</div>
+					<aside class="notes">
+						<li>Mathew Ko Colour Films collection is a collection of home movies from the early 1950s</li>
+						<li>Many of our collections, like this one, are of particularly local interest</li>
+						<li>They depict local places or notable events like cultural festivals</li>
+					</aside>
 				</section>
-				<section>
-					<h2>Migration: ContentDM to Vault</h2>
-					<ul>
-						<li class="fragment">Decision made in 2016, migration from 2018 to 2023</li>
-						<li class="fragment">Support for open standards (Linked Data, IIIF)</li>
-						<li class="fragment">More flexibility and control over how we organize and present our objects and collections</li>
-						<li class="fragment"><a href="https://www.youtube.com/watch?v=6YbBxUzhsyo" target="_blank">More detail and context in this presentation</a></li>
-					</ul>
+				<section data-background="images/whales.jpg">
+					<div class="text-background">
+						<h2>Migration: ContentDM to Vault</h2>
+						<ul>
+							<li>Support for open standards (Linked Data, IIIF)</li>
+							<li class="fragment">More flexibility and control over how we organize and present our objects and collections</li>
+							<li class="fragment"><a href="https://www.youtube.com/watch?v=6YbBxUzhsyo" target="_blank">More detail and context in this presentation</a></li>
+						</ul>
+					</div>
 				</section>
 				<section>
 					<h2>Linked Data (URI) Fields</h2>
@@ -83,22 +106,22 @@
 						<tbody>
 						<tr>
 							<td>Provider, Creator, Contributor, Subject, Geographic Coverage, Physical Repository</td>
-							<td>OCLC FAST</td>
+							<td><a href="https://www.oclc.org/research/areas/data-science/fast.html" target="_blank">OCLC FAST</a></td>
 						</tr>
 						<tr>
 							<td>Genre</td>
-							<td>Getty Art and Architecture Thesaurus</td>
+							<td><a href="https://www.getty.edu/research/tools/vocabularies/aat/about.html" target="_blank">Getty Art and Architecture Thesaurus</a></td>
 						</tr>
 						<tr>
 							<td>Rights Statement</td>
-							<td>https://rightsstatements.org; <br/> https://creativecommons.org</td>
+							<td><a href="https://rightsstatements.org/page/1.0/" target="_blank">rightsstatements.org</a>, <br/><a href="https://creativecommons.org/about/cclicenses/" target="_blank">Creative Commons</a></td>
 						</tr>
 						</tbody>
 					</table>
-					<p style="font-size: 24px">* See Figure 3 in <a href="https://www.tandfonline.com/doi/full/10.1080/01639374.2023.2204309" target="_blank">the article</a> for a more detailed table</p>
+					<p class="fragment" style="font-size: 24px">* See Figure 3 in <a href="https://www.tandfonline.com/doi/full/10.1080/01639374.2023.2204309" target="_blank">our article</a> for a more detailed table</p>
 				</section>
 				<section>
-					<h2>URIs and Labels</h2>
+					<h2>URIs and Labels on the Backend</h2>
 					<pre>
 <code class="json">
 "creator":["http://id.worldcat.org/fast/78887"],
@@ -186,9 +209,9 @@
 				<section>
 					<h2>Could this model work for your institution?</h2>
 					<ul>
-						<li><a href="http://www.inthelibrarywiththeleadpipe.org/2019/digital-libraries-critical-practice-in-communities/" target="_blank">Not free ($)</a>, but comes with more freedom</li>
-						<li><a href="https://hyku.samvera.org/2015/12/16/community_input.html">Hannah Frost: Tension between customization & sustainability</a></li>
-						<li>More communication necessary between programmers and "non-technical" folks</li>
+						<li>Not free ($), but more freedom</li>
+						<li class="fragment"><a href="https://hyku.samvera.org/2015/12/16/community_input.html">Hannah Frost on the tension between customization/sustainability</a></li>
+						<li class="fragment">More responsive, shorter development cycles</li>
 					</ul>
 				</section>
 				<section>
