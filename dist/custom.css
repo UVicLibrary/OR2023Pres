@@ -1,8 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
-
-.reveal {
-    font-family: "Poppins", "Source Sans Pro", sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&family=Roboto+Slab:wght@600&display=swap");
 
 .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
     text-transform: none;
@@ -19,9 +15,10 @@
     margin-bottom: 0 !important;
 }
 
-.reveal li {
-    font-size: 32px;
+.reveal div:not(.speaker-notes) li {
+    font-size: 2.25rem;
     text-align: center;
+    margin-bottom: 0.5rem;
 }
 
 .reveal ul {
@@ -85,7 +82,8 @@
 .text-background {
     background-color: rgba(253, 246, 227, 0.95);
     padding: 2rem;
-    /*opacity: 0.7;*/
+    width: fit-content;
+    min-width: 100%;
 }
 
 .inline-code {
@@ -94,7 +92,7 @@
     background-color: #272822;
 }
 
-.reveal ul {
+.reveal div:not(.speaker-notes) ul {
     list-style-type: none;
 }
 
@@ -112,4 +110,14 @@
 
 .iframe-descr h2 {
     color: #d33682;
+    font-size: 2.5rem;
+}
+
+:root {
+    --r-heading-font: 'Roboto Slab', Lato, sans-serif;
+    --r-heading2-size: 3.75rem;
+}
+
+.no-wrap {
+    white-space: pre;
 }
