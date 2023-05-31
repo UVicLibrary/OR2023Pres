@@ -21,18 +21,28 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h2>Open Standards-Based Development for Discovery and Interoperability</h2>
+					<h2>Open Standards-Based Development for Discovery & Interoperability</h2>
 					&nbsp;
-					<p>Tiffany Chan&ensp;|&ensp;University of Victoria, Canada</p>
-					<p>Link to slides: </p>
+					<span>Tiffany Chan</span>
+						<a href="https://github.com/UVicLibrary" target="_blank">
+							<img class="inline-icon" src="images/github-mark.png">
+						</a>
+						<a href="https://twitter.com/TiffChan29" target="_blank">
+							<img class="inline-icon" src="images/icons8-twitter-50.png">
+						</a>
+					&ensp;|&ensp;
+					<span>tjychan@uvic.ca</span>
+					<br/>
+					<span>Senior Developer&ensp;|&ensp;University of Victoria Libraries</span>  <img class="inline-icon" style="margin-bottom: -10px" src="images/canada.png"/><br/>
+					<span>Link to slides: <a href="https://uviclibrary.github.io/OR2023Pres/" target="_blank">uviclibrary.github.io/OR2023Pres</a></span>
 				</section>
 				</section>
 				<section data-background="images/UVicEdge-Zoom-background-library.jpg">
 					<div class="text-background">
-						<h2>University of Victoria Libraries ("UVic")</h2>
+						<h2>University of Victoria ("UVic") Libraries</h2>
 						<ul>
 							<li>~20,000 students, 900 full-time faculty, 150 library staff</li>
-							<li class="fragment">Multiple platforms for all our collections/objects</li>
+							<li class="fragment">Multiple digital platforms for our collections</li>
 							<li class="fragment">2 developers, X metadata staff working directly in/with our repository software (Vault)</li>
 						</ul>
 					</div>
@@ -49,7 +59,7 @@
 						<h2>Vault</h2>
 						<ul>
 							<li>Holds digitized materials from Special Collections & Archives, faculty/community partnerships</li>
-							<li class="fragment">Customized instance of <a href="https://hyku.samvera.org/" target="_blank">Hyku</a> (<a href="https://samvera.org/what-is-samvera/samvera-open-source-repository-framework" target="_blank">Samvera</a>), migrated from ContentDM in 2018</li>
+							<li class="fragment">Customized instance of <a href="https://hyku.samvera.org/" target="_blank">Hyku</a> (<a href="https://samvera.org/what-is-samvera/samvera-open-source-repository-framework" target="_blank">Samvera</a>), migrated from ContentDM starting in 2018</li>
 							<li class="fragment">94 collections, 12000+ works, 98000+ files</li>
 						</ul>
 					</div>
@@ -69,7 +79,7 @@
 				</section>
 				<section data-background="images/orpen.jpg">
 					<div style="position: absolute; width: 45%; top: -330px; right: -150px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); padding: 20px; font-size: 20px; text-align: left;">
-						<h2><a href="https://vault.library.uvic.ca/collections/61da6cbd-02e8-4dd3-8e9d-ccbd2947ef4f" target="_blank">Sir William Orpen Illustrated Letters</a></h2>
+						<h2 class="collection-title"><a href="https://vault.library.uvic.ca/collections/61da6cbd-02e8-4dd3-8e9d-ccbd2947ef4f" target="_blank">Sir William Orpen Illustrated Letters</a></h2>
 					</div>
 					<aside class="notes">
 						<li>We have several collections of correspondence (letters) in Vault, many from the early 1900s that have been scanned and uploaded as high-resolution images</li>
@@ -78,7 +88,7 @@
 				</section>
 				<section data-background-video="video/mathew_ko_shortened.mp4" >
 					<div style="position: absolute; width: 45%; left: -50px; top: 300px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); padding: 20px; font-size: 20px; text-align: left;">
-						<h2><a href="https://vault.library.uvic.ca/collections/ed61bace-5c1c-4e77-975e-0f6f943ae92d" target="_blank">Mathew Ko Colour Films:</a><br/> Victoria's Chinatown and Region</h2>
+						<h2 class="collection-title"><a href="https://vault.library.uvic.ca/collections/ed61bace-5c1c-4e77-975e-0f6f943ae92d" target="_blank">Mathew Ko Colour Films:</a><br/> Victoria's Chinatown and Region</h2>
 					</div>
 					<aside class="notes">
 						<li>Mathew Ko Colour Films collection is a collection of home movies from the early 1950s</li>
@@ -112,7 +122,7 @@
 						<tbody>
 						<tr>
 							<td>Provider, Creator, Contributor, Subject, Geographic Coverage, Physical Repository</td>
-							<td><a href="https://www.oclc.org/research/areas/data-science/fast.html" target="_blank">OCLC FAST</a></td>
+							<td><a href="https://www.oclc.org/research/areas/data-science/fast.html" target="_blank">(OCLC) FAST</a></td>
 						</tr>
 						<tr>
 							<td>Genre</td>
@@ -125,6 +135,14 @@
 						</tbody>
 					</table>
 					<p class="fragment" style="font-size: 24px">* See Figure 3 in <a href="https://www.tandfonline.com/doi/full/10.1080/01639374.2023.2204309" target="_blank">our article</a> for a more detailed table</p>
+					<aside class="notes">
+						<ul>
+							<li>Here's a table showing all our metadata fields that use controlled vocabularies, along wih the specific vocabulary that we use</li>
+							<li>Most of our fields use FAST, except for our rights and genre fields</li>
+							<li>* Advance slide *</li>
+							<li>For more details on how we implemented and migrated to FAST, my colleagues, Dean Seeman, Karen Dykes, and I recently published an article on our FAST implementation</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h2>URIs and Labels on the Backend</h2>
@@ -150,20 +168,27 @@
 					<img src="images/orpen_metadata.jpg"/>
 				</section>
 				<section>
-					<h3>How to Access Linked Data (URIs) via the IIIF Manifest or RDF/TTL</h3>
+					<h3>Accessing Linked Data via the IIIF Manifest or RDF/TTL</h3>
 					<p>Go the page for any work and add /manifest.json or .ttl to the end of the URL</p>
 					<div class="fragment">
 						<p><a href="https://vault.library.uvic.ca/concern/generic_works/1a597e67-17a8-4c97-9c63-c835a41f5474?locale=en" target="_blank">Example:</a></p>
 						<span class="long-url">vault.library.uvic.ca/concern/generic_works/1a597e67-17a8-4c97-9c63-c835a41f5474</span>
 						<span class="fragment fade-out long-url" style="color:#e06666">?locale=en</span><span class="fragment long-url fade-in-then-out" style="color:#02951b">/manifest.json</span><span class="fragment long-url" style="color:#4f46e5">.ttl</span>
 					</div>
+					<aside class="notes">
+						<ol>
+							<li>Go to the page for any work</li>
+							<li>If there is a question mark in the URL, delete that and everything after it</li>
+							<li>Add slash manifest to the end to see the manifest, or add .ttl to the ned to see turtle (RDF)</li>
+						</ol>
+					</aside>
 				</section>
-				<section data-background="images/whales.jpg">
+				<section data-background="images/open_source.jpg">
 					<div class="text-background">
-						<h2 class="no-wrap">Open-Source Software</h2>
+						<h2 class="no-wrap">Why Migrate to <br/>Open-Source Software</h2>
 						<ul>
 							<li>More flexibility and control over how we describe, organize, and present our objects and collections</li>
-							<li class="fragment">We can build custom features and interface tools</li>
+							<li>Customized features and interface tools</li>
 						</ul>
 					</div>
 					<aside class="notes">
@@ -183,6 +208,7 @@
 					<aside class="notes">
 						<ul>
 							<li>One of these custom features is support for EDTF, or Extended Date/Time Format, which was a request from our metadata department</li>
+							<li>EDTF uses special symbols to express complexity in dates that you couldn't get with basic ISO formats</li>
 							<li>The goal was to save and index EDTF date strings and then display humanized versions on the front end</li>
 						</ul>
 					</aside>
@@ -221,8 +247,10 @@
 					</div>
 					<aside class="notes">
 						<ul>
-							<li>And here's what it looks like in the interface, where we use the human-readable date, which are generated by the <a href="https://github.com/corylown/edtf-humanize" target="_blank">edtf-humanize</a>  gem by Duke Libraries.</li>
+							<li><em>* Scroll to Date Created field and highlight text *</em></li>
+							<li>Here's what EDTF looks like in the interface, where we use the human-readable date, which are generated by the <a href="https://github.com/corylown/edtf-humanize" target="_blank">edtf-humanize</a> gem by Duke Libraries.</li>
 							<li>The date links to a search for all items created in the same year or year range using the <a href="https://github.com/projectblacklight/blacklight_range_limit" target="_blank">Blacklight Range Limit</a> gem.</li>
+							<li><em>* Click link *</em></li>
 							<li>This draws from the list of years generated from the EDTF date.</li>
 						</ul>
 					</aside>
@@ -289,9 +317,10 @@
 							<li>The major advantage of open-source is the freedom to modify (creative control)</li>
 							<li><em>* Advance slide *</em></li>
 							<li>Local open-source development also allows developers like me to be more responsive to requests or bugs; priorities are determined locally by people doing the work rather than a vendor</li>
+							<li>This encourages more communication between units</li>
 							<li><em>* Advance slide *</em></li>
-							<li>Hannah Frost points out that code customizations inevitably create "complications in the upgrade path." Any major upgrade to the underlying code base requires a lot of work to sort through and resolve conflicts (i.e. you incur technical debt)</li>
-							<li>Major software upgrades are an ongoing challenge</li>
+							<li>Hannah Frost points out that code customizations inevitably create "complications in the upgrade path." Any major upgrade to the underlying code base requires a lot of work to sort through and resolve conflicts</li>
+							<li>Major software upgrades are an ongoing, significant challenge because they are so resource-intensive</li>
 						</ul>
 					</aside>
 				</section>
@@ -299,6 +328,22 @@
 					<div class="text-background">
 						<h2>Lessons On Migration</h2>
 					</div>
+				</section>
+				<section>
+					<h2>Thanks!</h2>
+					<span>Tiffany Chan</span>
+					<a href="https://github.com/UVicLibrary" target="_blank">
+						<img class="inline-icon" src="images/github-mark.png">
+					</a>
+					<a href="https://twitter.com/TiffChan29" target="_blank">
+						<img class="inline-icon" src="images/icons8-twitter-50.png">
+					</a>
+					&ensp;|&ensp;
+					<span>tjychan@uvic.ca</span>
+					<br/>
+					<span>Link to slides: <a href="https://uviclibrary.github.io/OR2023Pres/" target="_blank">uviclibrary.github.io/OR2023Pres</a></span>
+					<br/>
+					<span>Slides made with <a href="https://revealjs.com/" target="_blank">reveal.js</a></span>
 				</section>
 			</div>
 		</div>
