@@ -34,17 +34,19 @@
 					<span>tjychan@uvic.ca</span>
 					<br/>
 					<span>Senior Developer&ensp;|&ensp;University of Victoria Libraries</span>  <img class="inline-icon" style="margin-bottom: -10px" src="images/canada.png"/><br/>
-					<span>June 15, 2023</span><br/>
+					<span>15 June 2023&ensp;|&ensp;Stellenbosch, ZA</span><br/>
 					<span>Link to slides: <a href="https://uviclibrary.github.io/OR2023Pres/" target="_blank">uviclibrary.github.io/OR2023Pres</a></span>
 				</section>
 				</section>
 				<section data-background="images/UVicEdge-Zoom-background-library.jpg">
+					<div class="text-background slide-link">
+						<span>Link to slides: <a href="https://uviclibrary.github.io/OR2023Pres/" target="_blank">uviclibrary.github.io/OR2023Pres</a></span>
+					</div>
 					<div class="text-background">
 						<h2>University of Victoria ("UVic") Libraries</h2>
 						<ul>
 							<li>~20,000 students, 900 full-time faculty, 150 library staff</li>
 							<li class="fragment">Multiple digital platforms for our collections</li>
-							<li class="fragment">2 developers, X metadata staff working directly in/with our repository software (Vault)</li>
 						</ul>
 					</div>
 					<aside class="notes">
@@ -62,14 +64,16 @@
 							<li>Holds digitized materials from Special Collections & Archives, faculty/community partnerships</li>
 							<li class="fragment">Customized instance of <a href="https://hyku.samvera.org/" target="_blank">Hyku</a> (<a href="https://samvera.org/what-is-samvera/samvera-open-source-repository-framework" target="_blank">Samvera</a>), migrated from ContentDM starting in 2018</li>
 							<li class="fragment">94 collections, 12000+ works, 98000+ files</li>
+							<li class="fragment">2 developers, 2-3 metadata staff working directly in/with Vault (among other projects)</li>
 						</ul>
 					</div>
 					<aside class="notes">
 						<ul>
-							<li>We call it Vault because it mostly holds digitized objects from our Special Collections and Archives (the more rare and valuable stuff)</li>
+							<li>We call it Vault because it mostly holds digitized objects from our Special Collections and Archives (typically our most unique and rare materials)</li>
 							<li>Also houses materials from faculty and community partnerships, such as audio recordings or oral histories</li>
 							<li>Vault is built on an open-source software called Hyku, which is maintained by the Samvera community</li>
 							<li>At present, we have 94 collections with over 12000 works in them, over 98000 files</li>
+							<li>To give you an idea of staffing levels, we have 2 developers who spend ~80% of their time on Vault and 2-3 metadata staff who spend 5-30% of their time working on the uploading and editing records</li>
 						</ul>
 					</aside>
 				</section>
@@ -93,22 +97,24 @@
 					</div>
 					<aside class="notes">
 						<li>Mathew Ko Colour Films collection is a collection of home movies from the early 1950s</li>
-						<li>Many of our collections, like this one, are of particularly local interest</li>
-						<li>They depict local places or notable events like cultural festivals</li>
+						<li>Many of our collections, like this one, depict local places or events</li>
+						<li>When we were choosing a platform, we wanted one that could handle a diverse range of media and file types</li>
+						<li>Examples of things we do NOT put in Vault: theses & dissertations (they go in DSpace), datasets (Dataverse)</li>
 					</aside>
 				</section>
 				<section data-background="images/whales.jpg">
 					<div class="text-background">
 						<h2 class="no-wrap">Why Migrate? <br/>Support for Open Standards</h2>
 						<ul>
-							<li><a href="https://iiif.io/" target="_blank">IIIF</a>: automatic manifest generation, image server (<a href="https://github.com/sul-dlss/riiif" target="_blank">Riiif</a>), and viewer</li>
+							<li><a href="https://iiif.io/" target="_blank">IIIF</a>: automatic manifest generation, image server (<a href="https://github.com/sul-dlss/riiif" target="_blank">Riiif</a>), and viewer (<a href="https://universalviewer.io/" target="_blank">Universal Viewer</a>)</li>
 							<li class="fragment">Linked Data Platform with <a href="https://fedora.lyrasis.org/" target="_blank">Fedora</a></li>
 						</ul>
 					</div>
 					<aside class="notes">
-						<li>Hyku relies on an underlying piece of software called Fedora, which stores metadata as Linked Data (RDF statements)</li>
-						<li>It's also compatible with IIIF, a set of open standards and APIs for accessing images and uses Universal Viewer</li>
-						<li>The IIIF manifests are created on ingest and Hyku runs a IIIF server using Rails</li>
+						<li>Why did we choose Samvera for these types of collections? We wanted a platform that supported openness and interoperability</li>
+						<li>For example, Hyku uses IIIF, which is a set of web standards and APIs for disseminating & accessing images</li>
+						<li>Hyku creates IIIF manifests automatically when ingesting images and provides a IIIF server as well as image viewer</li>
+						<li>Hyku also uses Fedora as its underlying repository system, which has built-in support for Linked Data, an important factor for our institution</li>
 					</aside>
 				</section>
 				<section>
@@ -135,13 +141,17 @@
 						</tr>
 						</tbody>
 					</table>
-					<p class="fragment" style="font-size: 24px">* See Figure 3 in <a href="https://www.tandfonline.com/doi/full/10.1080/01639374.2023.2204309" target="_blank">our article</a> for a more detailed table</p>
+					<p class="fragment" style="font-size: 24px">* See Figure 3 in <a href="https://www.tandfonline.com/doi/full/10.1080/01639374.2023.2204309" target="_blank">our recent article</a> for a more detailed table and discussion of metadata</p>
 					<aside class="notes">
 						<ul>
-							<li>Here's a table showing all our metadata fields that use controlled vocabularies, along wih the specific vocabulary that we use</li>
-							<li>Most of our fields use FAST, except for our rights and genre fields</li>
+							<li>Hyku also lets us use different controlled vocabularies to make our data more interoperable (i.e. able to be understood by other systems that use or are aware of those vocabularies)</li>
+							<li>Controlled Vocabulary: "vocabulary" as in a system for describing things (as when cataloguing), "controlled" because it's a pre-determined, normalized list of values</li>
+							<li>This is a table showing all our metadata fields that use controlled vocabularies, along wih the specific vocabulary that we use</li>
+							<li>As you can see, most of our fields use OCLC FAST, except for our rights and genre fields</li>
+							<li>One of our biggest, most resource-intensive challenges during migration was not just dumping data out of ContentDM, but also reconciling that data with a new Vault data model</li>
+							<li>This often meant converting textual values into unique identifiers (URIs)</li>
 							<li>* Advance slide *</li>
-							<li>For more details on how we implemented and migrated to FAST, my colleagues, Dean Seeman, Karen Dykes, and I recently published an article on our FAST implementation</li>
+							<li>For more details on how we implemented and migrated to FAST, you can read an article that my colleagues, Dean Seeman, Karen Dykes, and I wrote on our implementation of FAST. I've linked to it on this slide.</li>
 						</ul>
 					</aside>
 				</section>
@@ -163,10 +173,19 @@
   "Glenavy, Beatrice Moss Campbell, Baroness, 1883-1970",
   "Painters--Biography"</code>
 					</pre>
+					<aside class="notes">
+						<ul>
+							<li>This is just an example of what the metadata looks like as indexed in Vault</li>
+							<li>For every controlled vocabulary field, we have both the URI and the human-readable label saved in a corresponding "label field"</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h2>Labels in the Interface</h2>
 					<img src="images/orpen_metadata.jpg"/>
+					<aside class="notes">
+						<p>On the actual website (web interface), we only display the human-readable labels.</p>
+					</aside>
 				</section>
 				<section>
 					<h3>Accessing Linked Data via the IIIF Manifest or RDF/TTL</h3>
@@ -177,6 +196,7 @@
 						<span class="fragment fade-out long-url" style="color:#e06666">?locale=en</span><span class="fragment long-url fade-in-then-out" style="color:#02951b">/manifest.json</span><span class="fragment long-url" style="color:#4f46e5">.ttl</span>
 					</div>
 					<aside class="notes">
+						<p>How can people or machines access our linked data?</p>
 						<ol>
 							<li>Go to the page for any work</li>
 							<li>If there is a question mark in the URL, delete that and everything after it</li>
@@ -193,7 +213,7 @@
 						</ul>
 					</div>
 					<aside class="notes">
-						<li>Perhaps most importantly, is that Vault/Hyku is open-source software (OSS), meaning anyone can use, examine, alter and redistribute its source code (definition from <a href="https://www.ibm.com/topics/open-source/topics/open-source" target="_blank">ibm.com</a>)</li>
+						<li>The other important consideration is that Vault/Hyku is open-source software, meaning anyone can use, examine, alter and redistribute its source code (definition from <a href="https://www.ibm.com/topics/open-source/topics/open-source" target="_blank">ibm.com</a>)</li>
 						<li>This lets us build custom features that we use in production</li>
 					</aside>
 				</section>
@@ -210,6 +230,7 @@
 						<ul>
 							<li>One of these custom features is support for EDTF, or Extended Date/Time Format, which was a request from our metadata department</li>
 							<li>EDTF uses special symbols to express complexity in dates that you couldn't get with basic ISO formats</li>
+							<li><em>* Advance slides *</em></li>
 							<li>The goal was to save and index EDTF date strings and then display humanized versions on the front end</li>
 						</ul>
 					</aside>
@@ -234,9 +255,9 @@
 					</div>
 					<aside class="notes">
 						<ul>
-							<li>To give an example, here is what the data looks like when our metadata staff enters it</li>
+							<li>To give an example, here is what the data looks like when our metadata staff enters it into Vault...</li>
 							<li><em>* Advance slide *</em></li>
-							<li>Here is what the date looks like in our indexing software. We use the <a href="https://github.com/inukshuk/edtf-ruby" target="_blank">edtf-ruby gem</a>, developed by Sylvester Keil and others, to parse the EDTF date string</li>
+							<li>...and here is what the date looks like in our indexing software. We use the <a href="https://github.com/inukshuk/edtf-ruby" target="_blank">edtf-ruby gem</a>, developed by Sylvester Keil and others, to parse the EDTF date string</li>
 								<li>Once parsed, the date is saved in 2 additional formats: 2) the earliest possible date is saved for sorting items; 3) a list of numbers/integers that correspond to each possible year.</li>
 						</ul>
 					</aside>
@@ -263,8 +284,8 @@
 					</div>
 					<aside class="notes">
 						<ul>
-							<li>This is our homepage where users can quickly run faceted searches by genre, time period (using on EDTF dates), popular subjects, or (geographic) place.</li>
-							<li>We also have the ability to upload collection thumbnails or select them from works in the collection (uploaded collection thumbnails will be available in Hyrax v. 4)</li>
+							<li>We've also heavily customized our home page. Here, users can quickly run faceted searches by genre, time period (again, EDTF dates), popular subjects, or (geographic) place.</li>
+							<li>We also have the ability to upload collection thumbnails or select them from works in the collection </li>
 							<li>Collections are also listed alphabetically under "All Collections"</li>
 							<li>For staff, we also display recently created works or collections</li>
 						</ul>
@@ -294,9 +315,10 @@
 					</div>
 					<aside class="notes">
 						<ul>
-							<li>Vault's code is open-source as well and is available on Github</li>
-							<li>For local testing and development, we use a piece of software called <a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker Desktop</a> (we don't run Docker in production, although other institutions do)</li>
-							<li>This lets us avoid creating a Virtual Machine (VM) and install all of Hyku's many dependencies</li>
+							<li>Vault's code is open-source and is available on Github</li>
+							<li>For local testing and development, we use a software called <a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker Desktop</a> (we don't run Docker in production, although other institutions do)</li>
+							<li>In general, we find this more approachable than installing and troubleshooting all of Hyku's dependencies individually</li>
+							<li>It can even run on a laptop (albeit slowly), depending on the laptop</li>
 						</ul>
 					</aside>
 				</section>
@@ -304,7 +326,7 @@
 					<div class="text-background">
 						<h2>On locally developed, open-source software</h2>
 						<ul>
-							<li class="fragment">Not free ($), but more freedom</li>
+							<li class="fragment">Not free ($) but freedom: labour vs. product</li>
 							<li class="fragment">More responsive, shorter development cycles</li>
 							<li class="fragment no-wrap"><a href="https://hyku.samvera.org/2015/12/16/community_input.html"target="_blank">Hannah Frost: tension between customization/sustainability</a></li>
 						</ul>
@@ -321,14 +343,8 @@
 							<li>This encourages more communication between units</li>
 							<li><em>* Advance slide *</em></li>
 							<li>Hannah Frost points out that code customizations inevitably create "complications in the upgrade path." Any major upgrade to the underlying code base requires a lot of work to sort through and resolve conflicts</li>
-							<li>Major software upgrades are an ongoing, significant challenge because they are so resource-intensive</li>
 						</ul>
 					</aside>
-				</section>
-				<section data-background="images/birds.jpg">
-					<div class="text-background">
-						<h2>Lessons On Migration</h2>
-					</div>
 				</section>
 				<section>
 					<h2>Thanks!</h2>

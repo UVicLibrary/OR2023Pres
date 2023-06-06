@@ -136,3 +136,15 @@ img.inline-icon {
     margin-bottom: -4px;
     margin-left: 4px;
 }
+
+.slide-link {
+    padding: 0.5rem 1rem;
+    min-width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    text-align: center;
+    display: block;
+    position: relative;
+    left: 2rem;
+}
