@@ -81,9 +81,9 @@
 
 .text-background {
     background-color: rgba(253, 246, 227, 0.95);
-    padding: 2rem;
+    padding: 1rem;
     width: fit-content;
-    min-width: 100%;
+    min-width: 90%;
 }
 
 .inline-code {
