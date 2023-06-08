@@ -118,12 +118,12 @@
 					</aside>
 				</section>
 				<section>
-					<h2>Metadata:<br/> Linked Data (URI) Fields</h2>
+					<h2>Metadata:<br/> Linked Data and URI Fields</h2>
 					<table>
 						<thead>
 						<tr>
 							<th>Field Name(s)</th>
-							<th class="no-wrap">Controlled Vocabulary</th>
+							<th class="no-wrap">Authority or URI</th>
 						</tr>
 						</thead>
 						<tbody>
@@ -145,7 +145,6 @@
 					<aside class="notes">
 						<ul>
 							<li>Hyku also lets us use different controlled vocabularies to make our data more interoperable (i.e. able to be understood by other systems that use or are aware of those vocabularies)</li>
-							<li>Controlled Vocabulary: "vocabulary" as in a system for describing things (as when cataloguing), "controlled" because it's a pre-determined, normalized list of values</li>
 							<li>This is a table showing all our metadata fields that use controlled vocabularies, along wih the specific vocabulary that we use</li>
 							<li>As you can see, most of our fields use OCLC FAST, except for our rights and genre fields</li>
 							<li>One of our biggest, most resource-intensive challenges during migration was not just dumping data out of ContentDM, but also reconciling that data with a new Vault data model</li>
@@ -317,8 +316,7 @@
 						<ul>
 							<li>Vault's code is open-source and is available on Github</li>
 							<li>For local testing and development, we use a software called <a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker Desktop</a> (we don't run Docker in production, although other institutions do)</li>
-							<li>In general, we find this more approachable than installing and troubleshooting all of Hyku's dependencies individually</li>
-							<li>It can even run on a laptop (albeit slowly), depending on the laptop</li>
+							<li>We have step-by-step instructions for how to set up a local instance of Vault with Docker</li>
 						</ul>
 					</aside>
 				</section>
